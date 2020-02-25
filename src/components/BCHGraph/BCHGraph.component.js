@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
+
+// Components
 import Heading from '../ui/Heading';
 
 const BCHGraphComp = ({ data }) => {
@@ -28,8 +30,7 @@ const BCHGraphComp = ({ data }) => {
 };
 
 BCHGraphComp.propTypes = {
-  data: PropTypes.array,
-  getData: PropTypes.func,
+  data: PropTypes.array, // Prop containing graph data
 };
 
 export default BCHGraphComp;

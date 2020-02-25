@@ -29,7 +29,7 @@ const BCHPrice = ({ price }) => (
 );
 
 BCHPrice.propTypes = {
-  price: PropTypes.number,
+  price: PropTypes.number, // Price of BCH
 };
 
 export default BCHPrice;

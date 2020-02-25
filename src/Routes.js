@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
 
 import PageLoader from './components/ui/PageLoader';
-
+// Components
 const Home = lazy(() => import('./pages/Home'));
 const NewsDetailPage = lazy(() => import('./pages/NewsDetailPage'));
 
