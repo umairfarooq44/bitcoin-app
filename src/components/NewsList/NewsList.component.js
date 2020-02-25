@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import NewsCard from '../ui/NewsCard';
 import Heading from '../ui/Heading';
 
-const NewsLink = styled(Link)`
+export const NewsLink = styled(Link)`
   text-decoration: none;
   margin-right: 10px;
   margin-bottom: 20px;
