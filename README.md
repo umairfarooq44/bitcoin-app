@@ -1,5 +1,5 @@
 # Bitcoin-app
-This repo contains code for web portal of DNow.
+This repo contains code for web bitcoin app.
 
 
 ## Requirements
