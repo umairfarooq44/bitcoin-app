@@ -14,13 +14,13 @@ const NewsContent = styled.div`
   }
 `;
 
-const NewsThumbnail = styled.img`
+export const NewsThumbnail = styled.img`
   width: 100%;
   margin-bottom: 10px;
   margin-top: 30px;
 `;
 
-const NewsTitle = styled.h2`
+export const NewsTitle = styled.h2`
   font-weight: 400;
 `;
 const NewsDescription = styled.h3`
