@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+
+// Components
 import BCHPrice from '../../components/BCHPrice';
 import BCHGraph from '../../components/BCHGraph';
 import NewsList from '../../components/NewsList';

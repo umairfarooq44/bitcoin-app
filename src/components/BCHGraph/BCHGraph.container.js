@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+
+// Components
 import getgraphDataAction from '../../actions/graphActions';
 import BCHGraphComp from './BCHGraph.component';
 import Btn from '../ui/Button';
@@ -17,15 +19,18 @@ const BCHGraph = ({ data, getData }) => {
   const [graphData, setGraphData] = useState([]);
   const [filter, setFilter] = useState(null);
   useEffect(() => {
+    // Checking if data is not available then fetch it
     if (data.length === 0) {
       getData();
     }
   }, []);
 
   useEffect(() => {
+    // setting state after data is fetched
     setGraphData(data);
   }, [data]);
 
+  // Function to apply filters
   const handleFilterChange = filterName => () => {
     if (filterName !== filter) {
       setFilter(filterName);
@@ -72,8 +77,8 @@ const BCHGraph = ({ data, getData }) => {
 };
 
 BCHGraph.propTypes = {
-  data: PropTypes.array,
-  getData: PropTypes.func,
+  data: PropTypes.array, // array containing data
+  getData: PropTypes.func, // Redux action to fetch graph data
 };
 
 const mapStateToProps = ({ graphData }) => ({

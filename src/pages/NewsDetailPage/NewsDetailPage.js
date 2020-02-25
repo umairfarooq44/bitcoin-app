@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Components
 import NewsDetail from '../../components/NewsDetail';
 
 const Home = () => {

@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+
+// components
 import NewsCard from '../ui/NewsCard';
 import Heading from '../ui/Heading';
 

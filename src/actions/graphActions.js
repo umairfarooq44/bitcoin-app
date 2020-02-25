@@ -10,6 +10,7 @@ export default function getGraphData() {
   return async dispatch => {
     try {
       const { data } = await IndexAPI.getBCHGraphData();
+      // Parsing the data to show
       const graphData = data.map(([BCHdate, BCHPrice]) => ({
         date: parseDate(BCHdate),
         tzDate: BCHdate,

@@ -10,6 +10,7 @@ export default function getPrice() {
   return async dispatch => {
     try {
       const { data } = await newsAPI.getNewsData();
+      // Filtering the news containing BCH tag
       const BCHNews = data.filter(({ tags }) => tags.includes('BCH'));
       dispatch(onLoadSuccess(BCHNews));
       return BCHNews;

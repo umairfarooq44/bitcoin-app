@@ -2,11 +2,14 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
+
+// Components
 import getNewsAction from '../../actions/newsActions';
 import NewsDetailComp from './NewsDetail.component';
 
 const newsDetail = ({ news, getNews }) => {
   useEffect(() => {
+    // Getting news if not available in redux
     if (!news) {
       getNews();
     }
@@ -15,9 +18,9 @@ const newsDetail = ({ news, getNews }) => {
 };
 
 newsDetail.propTypes = {
-  news: PropTypes.object,
-  getNews: PropTypes.func,
-  match: PropTypes.object,
+  news: PropTypes.object, // Redux state for news
+  getNews: PropTypes.func, // Redux based action prop to fetch data
+  match: PropTypes.object, // React Router Passed Props
 };
 
 const mapStateToProps = ({ newsList }, props) => {
@@ -26,6 +29,7 @@ const mapStateToProps = ({ newsList }, props) => {
       params: { id },
     },
   } = props;
+  // Filtering the news by id from the redux state
   return {
     news: newsList.find(({ id: postId }) => postId === Number(id)),
   };
