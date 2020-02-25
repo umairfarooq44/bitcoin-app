@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import PropTypes from 'prop-types';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import PageLoader from './components/ui/PageLoader';
 // Components
@@ -13,7 +13,7 @@ const Routes = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/post/:id" component={NewsDetailPage} />
-        <Route component={() => <div>No match page to be made</div>} />
+        <Redirect to="/" />
       </Switch>
     </Suspense>
   );
